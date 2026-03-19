@@ -1,0 +1,660 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Mar 19 17:57:39 2026
+# Process ID         : 41185
+# Current directory  : /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1
+# Command line       : vivado -log RV32IM72F8SPSoCTOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RV32IM72F8SPSoCTOP.tcl -notrace
+# Log file           : /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP.vdi
+# Journal file       : /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/vivado.jou
+# Running On         : khwl-main-pc
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 5800X 8-Core Processor
+# CPU Frequency      : 4316.979 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16652 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20947 MB
+# Available Virtual  : 12671 MB
+#-----------------------------------------------------------
+source RV32IM72F8SPSoCTOP.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/khwl/Desktop/HDMI_RISC-V_v2/vivado-library'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: link_design -top RV32IM72F8SPSoCTOP -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0.dcp' for cell 'hdmi_encoder'
+INFO: [Project 1-454] Reading design checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'master_pll'
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1788.266 ; gain = 0.000 ; free physical = 2685 ; free virtual = 11500
+INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'hdmi_encoder/U0'
+Finished Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'hdmi_encoder/U0'
+Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'master_pll/inst'
+Finished Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'master_pll/inst'
+Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'master_pll/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:54]
+Finished Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'master_pll/inst'
+Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/constrs_1/new/HDMI_demo_TOP.xdc]
+CRITICAL WARNING: [Constraints 18-1055] Clock 'sys_clk' completely overrides clock 'clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 10.000 -name sys_clk -waveform {0.000 5.000} [get_ports clk], [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/constrs_1/new/HDMI_demo_TOP.xdc:8]
+Previous: create_clock -period 10.000 [get_ports clk], [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:53]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/constrs_1/new/HDMI_demo_TOP.xdc]
+Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_encoder/U0'
+Finished Parsing XDC File [/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_encoder/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2517.645 ; gain = 0.000 ; free physical = 1496 ; free virtual = 10312
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+14 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2517.680 ; gain = 900.391 ; free physical = 1495 ; free virtual = 10310
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.33 . Memory (MB): peak = 2547.223 ; gain = 29.543 ; free physical = 2044 ; free virtual = 10860
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2556.129 ; gain = 8.906 ; free physical = 2042 ; free virtual = 10857
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1692 ; free virtual = 10507
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1692 ; free virtual = 10507
+Phase 1 Initialization | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1692 ; free virtual = 10507
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1692 ; free virtual = 10507
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1691 ; free virtual = 10507
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+Phase 2 Timer Update And Timing Data Collection | Checksum: 2ac21bef5
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 4 inverters resulting in an inversion of 59 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1d3c48ecd
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+Retarget | Checksum: 1d3c48ecd
+INFO: [Opt 31-389] Phase Retarget created 6 cells and removed 25 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 20 load pin(s).
+Phase 4 Constant propagation | Checksum: 2a5f76499
+
+Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+Constant propagation | Checksum: 2a5f76499
+INFO: [Opt 31-389] Phase Constant propagation created 66 cells and removed 122 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+Phase 5 Sweep | Checksum: 287e7e3d9
+
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.2 . Memory (MB): peak = 2912.910 ; gain = 0.000 ; free physical = 1690 ; free virtual = 10506
+Sweep | Checksum: 287e7e3d9
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 287e7e3d9
+
+Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1690 ; free virtual = 10505
+BUFG optimization | Checksum: 287e7e3d9
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 287e7e3d9
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1690 ; free virtual = 10505
+Shift Register Optimization | Checksum: 287e7e3d9
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 287e7e3d9
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1689 ; free virtual = 10505
+Post Processing Netlist | Checksum: 287e7e3d9
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 2030555d7
+
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1699 ; free virtual = 10514
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2944.926 ; gain = 0.000 ; free physical = 1698 ; free virtual = 10514
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 2030555d7
+
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1698 ; free virtual = 10514
+Phase 9 Finalization | Checksum: 2030555d7
+
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1699 ; free virtual = 10514
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               6  |              25  |                                              1  |
+|  Constant propagation         |              66  |             122  |                                              0  |
+|  Sweep                        |               2  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 2030555d7
+
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2944.926 ; gain = 32.016 ; free physical = 1699 ; free virtual = 10514
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 18 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 8 newly gated: 1 Total Ports: 36
+Number of Flops added for Enable Generation: 2
+
+Ending PowerOpt Patch Enables Task | Checksum: 1a5b76fb4
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1603 ; free virtual = 10418
+Ending Power Optimization Task | Checksum: 1a5b76fb4
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3128.992 ; gain = 184.066 ; free physical = 1603 ; free virtual = 10418
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 2563b9f49
+
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10402
+Ending Final Cleanup Task | Checksum: 2563b9f49
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10402
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10402
+INFO: [Common 17-83] Releasing license: Implementation
+44 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3128.992 ; gain = 611.312 ; free physical = 1586 ; free virtual = 10402
+INFO: [Vivado 12-24828] Executing command : report_drc -file RV32IM72F8SPSoCTOP_drc_opted.rpt -pb RV32IM72F8SPSoCTOP_drc_opted.pb -rpx RV32IM72F8SPSoCTOP_drc_opted.rpx
+Command: report_drc -file RV32IM72F8SPSoCTOP_drc_opted.rpt -pb RV32IM72F8SPSoCTOP_drc_opted.pb -rpx RV32IM72F8SPSoCTOP_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1584 ; free virtual = 10400
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1584 ; free virtual = 10400
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1584 ; free virtual = 10399
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1583 ; free virtual = 10399
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1583 ; free virtual = 10399
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1583 ; free virtual = 10399
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1583 ; free virtual = 10399
+Write Physdb Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1583 ; free virtual = 10399
+INFO: [Common 17-1381] The checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_opt.dcp' has been generated.
+Command: read_checkpoint -auto_incremental -incremental /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp
+INFO: [Vivado 12-9151] Incremental flow is being run with directive 'RuntimeOptimized'. This will override place_design, post-place phys_opt_design and route_design directives.
+
+Starting Incremental read checkpoint Task
+
+Phase 1 Process Reference Checkpoint Netlist
+INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1578 ; free virtual = 10395
+
+Phase 2 Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1578 ; free virtual = 10395
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1578 ; free virtual = 10395
+
+Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.32 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1578 ; free virtual = 10395
+
+Phase 3 Replay Physical Synthesis Transforms
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-81] Processed net internal_reset. Replicated 5 times.
+INFO: [Vivado_Tcl 4-521] iPhys_opt_design summary: tried 1 changes and 1 changes are successfully applied
+
+Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.53 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1578 ; free virtual = 10395
+
+Phase 4 Build Reuse DB
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10388
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10388
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10388
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10388
+Read placeStorage: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10387
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10387
+Read Physdb Files: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1573 ; free virtual = 10387
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10402
+INFO: [Designutils 20-2297] Reference Design: /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp, Summary | WNS = 0.167 | WHS = 0.102 | State = POST_ROUTE |
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10402
+
+Phase 5 Checking legality
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Read Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+Read RouteStorage: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+Phase 5 Checking legality | Checksum: 16999b829
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1602 ; free virtual = 10410
+
+Phase 6 Reporting
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Mar 19 17:58:00 2026
+| Host         : khwl-main-pc running 64-bit Ubuntu 24.04.4 LTS
+| Design       : RV32IM72F8SPSoCTOP
+| Device       : xc7a200t
+| Design State : Unknown
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |              Yes |
+| Incremental Directive | RuntimeOptimized |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+----------------------+----------------------------+--------------------+-------+
+|  Type | Matched % (of Total) | Current Reuse % (of Total) | Fixed % (of Total) | Total |
++-------+----------------------+----------------------------+--------------------+-------+
+| Cells |               100.00 |                     100.00 |               0.41 |  6317 |
+| Nets  |               100.00 |                     100.00 |               0.00 |  5229 |
+| Pins  |                    - |                     100.00 |                  - | 28705 |
+| Ports |               100.00 |                     100.00 |             100.00 |    22 |
++-------+----------------------+----------------------------+--------------------+-------+
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp |
++----------------+------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2025.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.167 |
+| Recorded WHS                   |                      0.102 |
+| Reference Speed File Version   | PRODUCTION 1.23 2018-06-13 |
+| Incremental Speed File Version | PRODUCTION 1.23 2018-06-13 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |     < 1 min |             |     < 1 min |             |
+| place_design    |       0.167 |             |     < 1 min |             |     < 1 min |             |
+| phys_opt_design |       0.167 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |       0.174 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+| fanout_opt              |      1 |          0 |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-------------------------------------+-------+
+|           QoR Suggestions           | Value |
++-------------------------------------+-------+
+| QoR Suggestions (Recommended)       |     0 |
+|   Suggestions Included In Reference |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+|   New Suggestions (INCR_FRIENDLY=1) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| QoR Suggestions (Not Recommended)   |     0 |
+|   New Suggestions (INCR_FRIENDLY=0) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| Disabled New Suggestions            |     0 |
++-------------------------------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  RV32IM72F8SPSoCTOP -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental -auto_incremental /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp
+place_design
+phys_opt_design
+route_design
+
+6.2 Incremental:
+----------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  RV32IM72F8SPSoCTOP -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental -auto_incremental /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp
+
+7. Non Reuse Information
+------------------------
+
++-----------------------+------+
+|          Type         |   %  |
++-----------------------+------+
+| Non-Reused Cells      | 0.00 |
+| Partially reused nets | 0.00 |
+| Non-Reused nets       | 0.00 |
+| Non-Reused Ports      | 0.00 |
++-----------------------+------+
+
+
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1595 ; free virtual = 10403
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1601 ; free virtual = 10410
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-83] Releasing license: Implementation
+
+Starting Incremental Placer Task
+INFO: [Vivado_Tcl 4-24] Running Incremental Placer flow for unplaced cells using reference design-checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.srcs/utils_1/imports/impl_1/HDMI_Test_Top_routed.dcp'.
+INFO: [Place 46-44] place_design is using directive Default with target WNS of 0 ns.
+INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |       0.167 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| phys_opt_design |       0.167 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |       0.174 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Ending Incremental Placer Task | Checksum: 16999b829
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1600 ; free virtual = 10408
+66 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file RV32IM72F8SPSoCTOP_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10402
+INFO: [Vivado 12-24828] Executing command : report_utilization -file RV32IM72F8SPSoCTOP_utilization_placed.rpt -pb RV32IM72F8SPSoCTOP_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_io -file RV32IM72F8SPSoCTOP_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1588 ; free virtual = 10396
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10402
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10402
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1594 ; free virtual = 10403
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1591 ; free virtual = 10402
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1588 ; free virtual = 10403
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10401
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10402
+Write Physdb Complete: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1586 ; free virtual = 10402
+INFO: [Common 17-1381] The checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1609 ; free virtual = 10420
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.174 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |       0.167 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| phys_opt_design |       0.167 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.174 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+77 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1609 ; free virtual = 10420
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1609 ; free virtual = 10420
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1609 ; free virtual = 10420
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1607 ; free virtual = 10421
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1605 ; free virtual = 10422
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1605 ; free virtual = 10423
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1605 ; free virtual = 10423
+Write Physdb Complete: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1605 ; free virtual = 10423
+INFO: [Common 17-1381] The checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+antenna Cleanup:Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1611 ; free virtual = 10425
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |       0.167 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| phys_opt_design |       0.167 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.174 |       0.167 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+81 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+INFO: [Vivado 12-24828] Executing command : report_drc -file RV32IM72F8SPSoCTOP_drc_routed.rpt -pb RV32IM72F8SPSoCTOP_drc_routed.pb -rpx RV32IM72F8SPSoCTOP_drc_routed.rpx
+Command: report_drc -file RV32IM72F8SPSoCTOP_drc_routed.rpt -pb RV32IM72F8SPSoCTOP_drc_routed.pb -rpx RV32IM72F8SPSoCTOP_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file RV32IM72F8SPSoCTOP_methodology_drc_routed.rpt -pb RV32IM72F8SPSoCTOP_methodology_drc_routed.pb -rpx RV32IM72F8SPSoCTOP_methodology_drc_routed.rpx
+Command: report_methodology -file RV32IM72F8SPSoCTOP_methodology_drc_routed.rpt -pb RV32IM72F8SPSoCTOP_methodology_drc_routed.pb -rpx RV32IM72F8SPSoCTOP_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file RV32IM72F8SPSoCTOP_timing_summary_routed.rpt -pb RV32IM72F8SPSoCTOP_timing_summary_routed.pb -rpx RV32IM72F8SPSoCTOP_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file RV32IM72F8SPSoCTOP_route_status.rpt -pb RV32IM72F8SPSoCTOP_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file RV32IM72F8SPSoCTOP_bus_skew_routed.rpt -pb RV32IM72F8SPSoCTOP_bus_skew_routed.pb -rpx RV32IM72F8SPSoCTOP_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file RV32IM72F8SPSoCTOP_incremental_reuse_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_power -file RV32IM72F8SPSoCTOP_power_routed.rpt -pb RV32IM72F8SPSoCTOP_power_summary_routed.pb -rpx RV32IM72F8SPSoCTOP_power_routed.rpx
+Command: report_power -file RV32IM72F8SPSoCTOP_power_routed.rpt -pb RV32IM72F8SPSoCTOP_power_summary_routed.pb -rpx RV32IM72F8SPSoCTOP_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+100 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file RV32IM72F8SPSoCTOP_clock_utilization_routed.rpt
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1627 ; free virtual = 10444
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1627 ; free virtual = 10444
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1627 ; free virtual = 10444
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1625 ; free virtual = 10444
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1618 ; free virtual = 10441
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1618 ; free virtual = 10442
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1618 ; free virtual = 10442
+Write Physdb Complete: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3128.992 ; gain = 0.000 ; free physical = 1618 ; free virtual = 10442
+INFO: [Common 17-1381] The checkpoint '/home/khwl/Desktop/HDMI_RISC-V_v2/HDMI_demo/HDMI_demo.runs/impl_1/RV32IM72F8SPSoCTOP_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 17:58:06 2026...

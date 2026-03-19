@@ -1,0 +1,8 @@
+ClockGen.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/ClockGen.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+SyncAsync.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/SyncAsync.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+SyncAsyncReset.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/SyncAsyncReset.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+DVI_Constants.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/DVI_Constants.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+OutputSERDES.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/OutputSERDES.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+TMDS_Encoder.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/TMDS_Encoder.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+rgb2dvi.vhd,vhdl,xil_defaultlib,../../../ipstatic/src/rgb2dvi.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+rgb2dvi_0.vhd,vhdl,xil_defaultlib,../../../../HDMI_demo.gen/sources_1/ip/rgb2dvi_0/sim/rgb2dvi_0.vhd,incdir="../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
